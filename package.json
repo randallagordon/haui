@@ -1,0 +1,28 @@
+{
+  "name": "haui",
+  "version": "0.0.0",
+  "description": "Home Automation UI",
+  "main": "index.js",
+  "bin": {
+    "haui": "bin/haui"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/randallagordon/haui/"
+  },
+  "keywords": [
+    "Home",
+    "Automation",
+    "X10"
+  ],
+  "author": "Randall A. Gordon",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^2.6.0",
+    "x10": "https://github.com/randallagordon/node-x10/tarball/personal",
+    "jade": "^1.2.0"
+  }
+}

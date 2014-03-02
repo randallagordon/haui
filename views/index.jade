@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    title Haui
+    meta(name="viewport", content="width=device=width,initial-scale=1,maximum-scale=1")
+    style.
+      html, body { background: #666; font: 20px/25px sans-serif; margin: 0; padding: 0; }
+      ul { list-style: none; margin: 0; padding: 0; }
+      li {
+        background: #222;
+        border-bottom: 1px solid #333;
+        padding: 0.75rem 1.5rem;
+      }
+      li:hover { background: #444; cursor: pointer; }
+      a {
+        color: #eee;
+        text-decoration: none;
+      }
+
+  body
+    ul
+      each button in buttons
+        li
+          a(href="javascript:$.get('" + server + ["/x10", button.command, button.house, button.unit].join("/") + "')")= button.label
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js")

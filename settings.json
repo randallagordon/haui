@@ -1,0 +1,32 @@
+{
+  "x10": { "serialPath": "/dev/ttyUSB0" },
+  "port": 8000,
+  "host": "127.0.0.1",
+  "uri": "http://127.0.0.1:8000",
+  "buttons": [
+    {
+      "label": "Livingroom - Front - ON",
+      "command": "ON",
+      "house": "A",
+      "unit": "1"
+    },
+    {
+      "label": "Livingroom - Front - OFF",
+      "command": "OFF",
+      "house": "A",
+      "unit": "1"
+    },
+    {
+      "label": "Livingroom - Hall - ON",
+      "command": "ON",
+      "house": "A",
+      "unit": "2"
+    },
+    {
+      "label": "Livingroom - Hall - OFF",
+      "command": "OFF",
+      "house": "A",
+      "unit": "2"
+    }
+  ]
+}
