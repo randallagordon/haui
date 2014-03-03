@@ -58,6 +58,10 @@ The `uri` property is optional, simply provided as a way to override what gets u
 
 ## CHANGELOG ######################################################################
 
+### v0.0.2
+
+ * Fix path resolution, add optional logging with 'good'
+
 ### v0.0.1
 
  * First release, sorely lacking in awesome...
