@@ -15,38 +15,60 @@ $ haui ./path/to/settings-file.json
 
 ## Example Settings JSON
 
-The `uri` property is optional, simply provided as a way to override what gets used in the HTML (Jade) view.
-
 ```json
 {
   "x10": { "serialPath": "/dev/ttyUSB0" },
   "port": 8000,
   "host": "127.0.0.1",
-  "uri": "http://127.0.0.1:8000",
   "buttons": [
     {
+      "type": "x10",
       "label": "Livingroom - Front - ON",
       "command": "ON",
       "house": "A",
       "unit": "1"
     },
     {
+      "type": "x10",
       "label": "Livingroom - Front - OFF",
       "command": "OFF",
       "house": "A",
       "unit": "1"
     },
     {
+      "type": "x10",
       "label": "Livingroom - Hall - ON",
       "command": "ON",
       "house": "A",
       "unit": "2"
     },
     {
+      "type": "x10",
       "label": "Livingroom - Hall - OFF",
       "command": "OFF",
       "house": "A",
       "unit": "2"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Power",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Power"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Volume Up",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Up"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Volume Down",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Down"
     }
   ]
 }
@@ -58,6 +80,10 @@ The `uri` property is optional, simply provided as a way to override what gets u
 
 ## CHANGELOG ######################################################################
 
+### v0.0.3
+
+ * LIRC support via [lirc_node](https://github.com/alexbain/lirc_node)
+
 ### v0.0.2
 
  * Fix path resolution, add optional logging with 'good'
@@ -68,8 +94,8 @@ The `uri` property is optional, simply provided as a way to override what gets u
 
 ## TODO ######################################################################
 
- * Leverage [node-lirc](https://github.com/alexbain/lirc_node) for home theater control
  * Create a non-crap UI
+ * Break out device support into HAPI plugins
 
 ## LICENSE ####################################################################
 

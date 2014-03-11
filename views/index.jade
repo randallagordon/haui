@@ -21,6 +21,9 @@ html(lang="en")
     ul
       each button in buttons
         li
-          a(href="javascript:$.get('" + server + ["/x10", button.command, button.house, button.unit].join("/") + "')")= button.label
+          - if (button.type === "x10")
+            a(href="javascript:$.get('" + ["/x10", button.command, button.house, button.unit].join("/") + "')")= button.label
+          - else if (button.type === "lirc")
+            a(href="javascript:$.get('" + ["/lirc", button.command, button.device, button.button].join("/") + "')")= button.label
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js")
