@@ -24,6 +24,7 @@
     "hapi": "^2.6.0",
     "x10": "https://github.com/randallagordon/node-x10/tarball/personal",
     "jade": "^1.2.0",
-    "good": "^1.0.0"
+    "good": "^1.0.0",
+    "lirc_node": "0.0.1"
   }
 }
