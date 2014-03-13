@@ -5,31 +5,59 @@
   "buttons": [
     {
       "type": "x10",
-      "label": "Livingroom - Front - ON",
+      "label": "Front - ON",
+      "icon": "fa-lightbulb-o",
       "command": "ON",
       "house": "A",
       "unit": "1"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Front - OFF",
+      "label": "Front - OFF",
+      "icon": "fa-lightbulb-o",
       "command": "OFF",
       "house": "A",
       "unit": "1"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Hall - ON",
+      "label": "Hall - ON",
+      "icon": "fa-lightbulb-o",
       "command": "ON",
       "house": "A",
       "unit": "2"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Hall - OFF",
+      "label": "Hall - OFF",
+      "icon": "fa-lightbulb-o",
       "command": "OFF",
       "house": "A",
       "unit": "2"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Power",
+      "icon": "fa-power-off",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Power"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Volume Up",
+      "icon": "fa-volume-up",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Up"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood - Volume Down",
+      "icon": "fa-volume-down",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Down"
     }
   ]
 }

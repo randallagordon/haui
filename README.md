@@ -23,28 +23,32 @@ $ haui ./path/to/settings-file.json
   "buttons": [
     {
       "type": "x10",
-      "label": "Livingroom - Front - ON",
+      "label": "Front - ON",
+      "icon": "fa-lightbulb-o",
       "command": "ON",
       "house": "A",
       "unit": "1"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Front - OFF",
+      "label": "Front - OFF",
+      "icon": "fa-lightbulb-o",
       "command": "OFF",
       "house": "A",
       "unit": "1"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Hall - ON",
+      "label": "Hall - ON",
+      "icon": "fa-lightbulb-o",
       "command": "ON",
       "house": "A",
       "unit": "2"
     },
     {
       "type": "x10",
-      "label": "Livingroom - Hall - OFF",
+      "label": "Hall - OFF",
+      "icon": "fa-lightbulb-o",
       "command": "OFF",
       "house": "A",
       "unit": "2"
@@ -52,6 +56,7 @@ $ haui ./path/to/settings-file.json
     {
       "type": "lirc",
       "label": "Kenwood - Power",
+      "icon": "fa-power-off",
       "command": "send_once",
       "device": "Kenwood",
       "button": "Power"
@@ -59,6 +64,7 @@ $ haui ./path/to/settings-file.json
     {
       "type": "lirc",
       "label": "Kenwood - Volume Up",
+      "icon": "fa-volume-up",
       "command": "send_once",
       "device": "Kenwood",
       "button": "Volume_Up"
@@ -66,6 +72,7 @@ $ haui ./path/to/settings-file.json
     {
       "type": "lirc",
       "label": "Kenwood - Volume Down",
+      "icon": "fa-volume-down",
       "command": "send_once",
       "device": "Kenwood",
       "button": "Volume_Down"
@@ -83,6 +90,7 @@ $ haui ./path/to/settings-file.json
 ### v0.0.3
 
  * LIRC support via [lirc_node](https://github.com/alexbain/lirc_node)
+ * Button icons via [Font Awesome](http://fontawesome.io/)
 
 ### v0.0.2
 
@@ -94,7 +102,7 @@ $ haui ./path/to/settings-file.json
 
 ## TODO ######################################################################
 
- * Create a non-crap UI
+ * Create a non-crap responsive UI
  * Break out device support into HAPI plugins
 
 ## LICENSE ####################################################################

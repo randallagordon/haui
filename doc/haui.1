@@ -17,39 +17,68 @@ $ haui \./path/to/settings\-file\.json
 .RE
 .SH Example Settings JSON
 .P
-The \fBuri\fR property is optional, simply provided as a way to override what gets used in the HTML (Jade) view\.
-.P
 .RS 2
 .EX
 {
   "x10": { "serialPath": "/dev/ttyUSB0" },
   "port": 8000,
   "host": "127\.0\.0\.1",
-  "uri": "http://127\.0\.0\.1:8000",
   "buttons": [
     {
-      "label": "Livingroom \- Front \- ON",
+      "type": "x10",
+      "label": "Front \- ON",
+      "icon": "fa\-lightbulb\-o",
       "command": "ON",
       "house": "A",
       "unit": "1"
     },
     {
-      "label": "Livingroom \- Front \- OFF",
+      "type": "x10",
+      "label": "Front \- OFF",
+      "icon": "fa\-lightbulb\-o",
       "command": "OFF",
       "house": "A",
       "unit": "1"
     },
     {
-      "label": "Livingroom \- Hall \- ON",
+      "type": "x10",
+      "label": "Hall \- ON",
+      "icon": "fa\-lightbulb\-o",
       "command": "ON",
       "house": "A",
       "unit": "2"
     },
     {
-      "label": "Livingroom \- Hall \- OFF",
+      "type": "x10",
+      "label": "Hall \- OFF",
+      "icon": "fa\-lightbulb\-o",
       "command": "OFF",
       "house": "A",
       "unit": "2"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood \- Power",
+      "icon": "fa\-power\-off",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Power"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood \- Volume Up",
+      "icon": "fa\-volume\-up",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Up"
+    },
+    {
+      "type": "lirc",
+      "label": "Kenwood \- Volume Down",
+      "icon": "fa\-volume\-down",
+      "command": "send_once",
+      "device": "Kenwood",
+      "button": "Volume_Down"
     }
   ]
 }
@@ -59,6 +88,14 @@ The \fBuri\fR property is optional, simply provided as a way to override what ge
 .P
 Screenshot \fIhttps://github\.com/randallagordon/haui/raw/master/img/readme\-screenshot\.png\fR
 .SH CHANGELOG
+.SS v0\.0\.3
+.RS 0
+.IP \(bu 2
+LIRC support via lirc_node \fIhttps://github\.com/alexbain/lirc_node\fR
+.IP \(bu 2
+Button icons via Font Awesome \fIhttp://fontawesome\.io/\fR
+
+.RE
 .SS v0\.0\.2
 .RS 0
 .IP \(bu 2
@@ -74,9 +111,9 @@ First release, sorely lacking in awesome\.\.\.
 .SH TODO
 .RS 0
 .IP \(bu 2
-Leverage node\-lirc \fIhttps://github\.com/alexbain/lirc_node\fR for home theater control
+Create a non\-crap responsive UI
 .IP \(bu 2
-Create a non\-crap UI
+Break out device support into HAPI plugins
 
 .RE
 .SH LICENSE
