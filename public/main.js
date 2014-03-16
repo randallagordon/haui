@@ -6,7 +6,7 @@ var http = require("http"),
     async = require("async");
 
 var buildCommandPath = function (cmd) {
-  var cmdPath = "/bob/";
+  var cmdPath = "/";
 
   if (cmd.type === "x10") {
     cmdPath += "x10" +
