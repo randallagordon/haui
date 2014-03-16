@@ -48,7 +48,7 @@ html(lang="en")
               i.fa.fa-lg(class=button.icon)
               span= button.label
           - else if (button.type === "lirc")
-            a(href="javascript:$.get('" + ["/lirc", button.command, button.device, button.button].join("/") + "')")
+            a(href="javascript:$.get('/lirc?" + [ "command=", button.command, "&device=", encodeURIComponent(button.device), "&button=", encodeURIComponent(button.button)].join("") + "')")
               i.fa.fa-lg(class=button.icon)
               span= button.label
 
