@@ -21,7 +21,6 @@
     "jquery": true,
     "globals": {
       "_": false,
-      "async": false,
       "angular": false
     }
 }

@@ -7,7 +7,10 @@
     "haui": "bin/haui"
   },
   "scripts": {
-    "test": ""
+    "start": "node index.js",
+    "test": "",
+    "build-js": "browserify lib/client.js | uglifyjs > public/main.js",
+    "watch-js": "watchify lib/client.js -o public/main.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,9 @@
     "good": "^1.0.0",
     "lirc_node": "0.0.1",
     "async": "^0.2.10"
+  },
+  "devDependencies": {
+    "browserify": "^3.32.1",
+    "uglify-js": "^2.4.13"
   }
 }
